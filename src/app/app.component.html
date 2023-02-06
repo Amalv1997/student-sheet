@@ -1,0 +1,119 @@
+<div class="search m-5">
+<label for="search " class="pr-2">Search</label>
+<input type="search" (keyup)="search($event)" />
+</div>
+
+<div class="container m-5">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th><i class="fa-solid fa-square-minus mb-4"></i></th>
+      <th>
+        <h3 class="text-center">Name</h3>
+        <div class="d-flex">
+          <button
+            class="btn btn-secondary btn-sm mr-2"
+            (click)="increasing('name', 'Asc')"
+          >
+            Acending
+          </button>
+          <button
+            class="btn btn-secondary btn-sm"
+            (click)="increasing('name', 'Desc')"
+          >
+            Decending
+          </button>
+        </div>
+      </th>
+      <th>
+        <h3 class="text-center">Gender</h3>
+        <div class="d-flex">
+          <button
+            class="btn btn-secondary btn-sm mr-2"
+            (click)="increasing('gender', 'Asc')"
+          >
+            Acending
+          </button>
+          <button
+            class="btn btn-secondary btn-sm"
+            (click)="increasing('gender', 'Desc')"
+          >
+            Decending
+          </button>
+        </div>
+      </th>
+      <th>
+        <h3 class="text-center">Physics</h3>
+        <div class="d-flex">
+          <button
+            class="btn btn-secondary btn-sm mr-2"
+            (click)="increasing('physics', 'Asc')"
+          >
+            Acending
+          </button>
+          <button
+            class="btn btn-secondary btn-sm"
+            (click)="increasing('physics', 'Desc')"
+          >
+            Decending
+          </button>
+        </div>
+      </th>
+      <th>
+        <h3 class="text-center">Maths</h3>
+        <div class="d-flex">
+          <button
+            class="btn btn-secondary btn-sm mr-2"
+            (click)="increasing('maths', 'Asc')"
+          >
+            Acending
+          </button>
+          <button
+            class="btn btn-secondary btn-sm"
+            (click)="increasing('maths', 'Desc')"
+          >
+            Decending
+          </button>
+        </div>
+      </th>
+      <th>
+        <h3 class="text-center">English</h3>
+        <div class="d-flex">
+          <button
+            class="btn btn-secondary btn-sm mr-2"
+            (click)="increasing('english', 'Asc')"
+          >
+            Acending
+          </button>
+          <button
+            class="btn btn-secondary btn-sm"
+            (click)="increasing('english', 'Desc')"
+          >
+            Decending
+          </button>
+        </div>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="text-center" *ngFor="let list of listData">
+      <th><input type="checkbox" /></th>
+      <th>{{ list.name }}</th>
+      <th>{{ list.gender }}</th>
+      <th>{{ list.physics }}</th>
+      <th>{{ list.maths }}</th>
+      <th>{{ list.english }}</th>
+    </tr>
+  </tbody>
+</table>
+</div>
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
